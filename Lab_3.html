@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3 - Rock Paper Scissors</title>
+    <style>
+        body {
+            background-color: #9aaef5;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #fd3232;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar {
+            background-color: blue;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            position: relative;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar a::after {
+            content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 5px;
+        background-color: rgb(64, 254, 1);
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .form-container {
+            background-color: #f7c709;
+            padding: 20px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .rules-container {
+            background-color: #00ff6a;
+            padding: 20px;
+            width: 30%;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .rules-container:hover {
+            background-color: #f841b2;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-container h2 {
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #fd3232;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        .rules-container h3 {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Lab 3 - Rock Paper Scissors</div>
+
+    <div class="navbar">
+        <a href="https://finance.yahoo.com">Yahoo Finance</a>
+        <a href="https://gemini.google.com/app">Gemini</a>
+        <a href="https://www.testudo.umd.edu">Testudo</a>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Please choose one of the following.</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="Ali"><br><br>
+
+                <label for="choice">Your choice:</label>
+                <select id="choice" name="choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select><br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="rules-container">
+            <h3>Rules</h3>
+            <p><strong>You must choose Rock, Paper or Scissors</strong></p>
+            <p>The Combos are as follows:</p>
+            <ul>
+                <li>Rock beats Scissors</li>
+                <li>Scissors beats Paper</li>
+                <li>Paper beats Rock</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        Why did the frog take the bus to work?
+        His car got TOAD!
+    </div>
+
+</body>
+</html>
